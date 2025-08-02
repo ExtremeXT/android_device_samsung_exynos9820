@@ -5,11 +5,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-ifneq ($(filter beyond2lte,$(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
 
+ifneq ($(filter beyond0lte beyond1lte beyond2lte beyondx,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
-
+include $(CLEAR_VARS)
 endif
-

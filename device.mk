@@ -25,6 +25,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
 	ro.fastbootd.available=true
 
-# Screen
-TARGET_SCREEN_WIDTH := 1440
-TARGET_SCREEN_HEIGHT := 3040
+# Manual workaround for common tree
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root)
